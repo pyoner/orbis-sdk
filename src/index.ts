@@ -13,7 +13,7 @@ import {
   encryptDM,
   encryptPost,
   decryptString,
-} from "./utils/lit-helpers.js";
+} from "./utils/lit-helpers";
 
 /** Internal helpers */
 import type {
@@ -29,7 +29,7 @@ import type {
   EncryptedMessage,
   GetPostsOptions,
   GetConversationsOptions,
-} from "./src/types";
+} from "./types";
 import { indexer } from "./lib/indexer-db";
 import { forceIndex, forceIndexDid, sleep } from "./utils/index";
 
@@ -54,7 +54,7 @@ export class Orbis {
    * Initialize the SDK by connecting to a Ceramic node, developers can pass their own Ceramic object if the user is
    * already connected within their application
    */
-  constructor(options: { ceramic?: CeramicClient; node?: string }) {
+  constructor(options?: { ceramic?: CeramicClient; node?: string }) {
     if (options && options.ceramic) {
       /** Initialize the Orbis object using the Ceramic object passed in the option */
       this.ceramic = options.ceramic;

@@ -1,5 +1,5 @@
 import type { EIP1193Provider } from "eip1193-provider";
-import type { AccessControlCondition, EncryptionRules } from "../src/types";
+import type { AccessControlCondition, EncryptionRules } from "../types";
 
 import LitJsSdk from "lit-js-sdk";
 import { toUtf8Bytes } from "@ethersproject/strings";
@@ -10,7 +10,7 @@ import {
   buf2hex,
   getAddressFromDid,
   sleep,
-} from "./index.js";
+} from "./index";
 import { Buffer } from "buffer";
 
 /** Initialize lit */
